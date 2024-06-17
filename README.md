@@ -155,5 +155,5 @@ You can even define your own rotors, and put any number of them in your machine 
 https://www.youtube.com/watch?v=ybkkiGtJmkM
 
 ### Simulators 
-https://legacy.cryptool.org/en/cto/enigma-step-by-step
+https://legacy.cryptool.org/en/cto/enigma-step-by-step <br>
 https://piotte13.github.io/enigma-cipher/
