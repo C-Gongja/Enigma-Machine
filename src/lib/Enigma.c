@@ -110,5 +110,36 @@ void tick_Enigma(Enigma *self)
 // n번 맨 앞(첫번째) rotor를 돌린다는 뜻
 void tick_n_Enigma(Enigma *self, size_t n)
 {
+	printf("tick_n_Enigma\n");
 	tick_Rotor(self->rotors, (int)n);
+}
+
+void print_Enigma(Enigma *self)
+{
+	printf("Plugboard:\n");
+	printf("\t%s", self->pairs);
+	printf("\n");
+	// printf("Rotors:");
+	// printf("\n");
+	// for (size_t i = 0; i < self->num_rotors; i++)
+	// {
+	// 	printf("%s", self->rotor_info[i]);
+	// }
+	// printf("\n");
+	printf("Rings:\n");
+	for (size_t i = 0; i < self->num_rotors; i++)
+	{
+		printf("\t%zu ", self->rings[i]);
+	}
+	printf("\n");
+	printf("Initials:\n");
+	for (size_t i = 0; i < self->num_rotors; i++)
+	{
+		printf("\t%zu ", self->setting[i]);
+	}
+	printf("\n");
+	printf("Reflector:\n");
+	printf("\t%s", self->reflector);
+	printf("\n");
+
 }

@@ -12,6 +12,7 @@ set (CMAKE_C_STANDARD 99)
 
 set(INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 set(LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
+set(APP_DIR ${PROJECT_SOURCE_DIR}/app)
 set(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}
     CACHE STRING "Choose the type of build, options are: None Debug Release asan"
     FORCE)
@@ -33,6 +34,12 @@ add_library(Enigma SHARED
     ${LIB_DIR}/Enigma.c
 )
 
+
+# Add the executable for app.cpp
+add_executable(EnigmaApp ${APP_DIR}/app.cpp)
+
+# Link the Enigma library to the app executable
+target_link_libraries(EnigmaApp Enigma)
 
 # The code below sets up GoogleTest
 # Reference: http://google.github.io/googletest/quickstart-cmake.html

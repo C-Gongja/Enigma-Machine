@@ -1,0 +1,5 @@
+if(EXISTS "/Users/yoon/Documents/GitHub/Enigma-Machine/src/build/EnigmaTests[1]_tests.cmake")
+  include("/Users/yoon/Documents/GitHub/Enigma-Machine/src/build/EnigmaTests[1]_tests.cmake")
+else()
+  add_test(EnigmaTests_NOT_BUILT EnigmaTests_NOT_BUILT)
+endif()

@@ -62,4 +62,6 @@ void tick_Enigma(Enigma *self);
 /// @param self A high level representation of the machine.
 /// @param n A number represent how many ticks are there.
 void tick_n_Enigma(Enigma *self, size_t n);
+
+void print_Enigma(Enigma *self);
 #endif
