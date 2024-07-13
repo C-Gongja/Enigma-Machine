@@ -85,7 +85,7 @@ void print_main(){
 	cout << "s: Show the current setting" << endl;
 	cout << "c: Change the setting" << endl;
 	cout << "q: Quit the program" << endl;
-	cout << "h: Show this help message" << endl;
+	cout << "h: Show help message" << endl;
 	cout << "m: main menu" << endl;
 }
 
