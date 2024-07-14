@@ -42,7 +42,12 @@ unordered_map<string, const char *> macroMap = {
 };
 
 void help() {
-	
+	//explain about the Enigma machine
+	// Plugboard:
+	// Rotors:
+	// rings start with 0
+	// init 0 = A, 1 = B, 2 = C, ..., 25 = Z
+	// Reflector:
 }
 
 const char* getMacro(string macro) {
