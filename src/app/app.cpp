@@ -17,7 +17,7 @@ void clear_terminal() {
 using namespace std;
 
 unordered_map<string, const char *> macroMap = {
-	/// Rotor I ~ V used in Enigma I
+/// Rotor I ~ V used in Enigma I
 {"ROTOR_I", ROTOR_I},
 {"ROTOR_II", ROTOR_II},
 {"ROTOR_III", ROTOR_III},
@@ -43,11 +43,45 @@ unordered_map<string, const char *> macroMap = {
 
 void help() {
 	//explain about the Enigma machine
-	// Plugboard:
-	// Rotors:
-	// rings start with 0
-	// init 0 = A, 1 = B, 2 = C, ..., 25 = Z
-	// Reflector:
+	cout << "----------------------------------" << endl;
+	cout << "			How to use" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "1. Enter the number of Rotors" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "2. Enter the Rotors" << endl;
+	cout << "Rotor List:" << endl;
+	cout << "Enigma Machine I:" << endl;
+	cout << "  ROTOR_I" << endl;
+	cout << "  ROTOR_II" << endl;
+	cout << "  ROTOR_III" << endl;
+	cout << "  ROTOR_IV" << endl;
+	cout << "  ROTOR_V" << endl;
+	cout << "Enigma Machine M4:" << endl;
+	cout << "  ROTOR_VI" << endl;
+	cout << "  ROTOR_VII" << endl;
+	cout << "  ROTOR_VIII" << endl;
+	cout << "  ROTOR_BETA" << endl;
+	cout << "  ROTOR_GAMMA" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "3. Enter the Rings:" << endl;
+	cout << "  rings start with 0" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "4. Enter the Initials:" << endl;
+	cout << "  init 0 = A, 1 = B, 2 = C, ..., 25 = Z" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "5. Enter the Reflector" << endl;
+	cout << "Reflector List:" << endl;
+	cout << "Enigma Machine I:" << endl;
+	cout << "  I_UKW_A" << endl;
+	cout << "  I_UKW_B" << endl;
+	cout << "  I_UKW_C" << endl;
+	cout << "Enigma Machine M4:" << endl;
+	cout << "  UKW_B" << endl;
+	cout << "  UKW_C" << endl;
+	cout << "----------------------------------" << endl;
+	cout << "6. Enter the PlugBoard pairs" << endl;
+	cout << "  (e.g., AGCF = A<->G, C<->F)" << endl;
+	cout << "----------------------------------" << endl;
 }
 
 const char* getMacro(string macro) {
@@ -92,6 +126,7 @@ void print_main(){
 	cout << "q: Quit the program" << endl;
 	cout << "h: Show help message" << endl;
 	cout << "m: main menu" << endl;
+	cout << "----------------------------------" << endl;
 }
 
 Enigma *change_settings(const char **rotors, size_t *rings, size_t *inits, const char *reflector, char *pairs)
